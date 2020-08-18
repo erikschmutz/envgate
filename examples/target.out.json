@@ -1,0 +1,5 @@
+{
+  "PREFIX": "This is a really cool statement",
+  "GENERATED_STATEMENT": "This is a really cool statement ${STATEMENT_ABOUT_HOBBIES}",
+  "USES_TABS": true
+}

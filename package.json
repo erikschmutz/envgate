@@ -1,0 +1,29 @@
+{
+  "name": "envgate",
+  "version": "0.0.5",
+  "description": "reads in and replaces the keys in the task definition from the .envgate file",
+  "main": "dist",
+  "bin": {
+    "envgate": "./bin/index"
+  },
+  "scripts": {
+    "prepublish": " npm run build",
+    "start": "ts-node src/index",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "npm run start",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^6.0.0"
+  },
+  "homepage": "",
+  "devDependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/node": "^14.6.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  }
+}

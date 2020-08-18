@@ -1,0 +1,5 @@
+{
+  "PREFIX": "This is a really cool statement",
+  "GENERATED_STATEMENT": "${PREFIX} ${STATEMENT_ABOUT_HOBBIES}",
+  "USES_TABS": "${CONFIG.USES_TABS}"
+}

@@ -1,0 +1,4 @@
+{
+  "HOBBIES": "PROGRAMMING",
+  "STATEMENT_ABOUT_HOBBIES": "My name is ${NAME}, I am ${AGE} and I love ${HOBBIES}"
+}
