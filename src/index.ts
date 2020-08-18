@@ -92,20 +92,20 @@ class Handler {
       ...targetObject
     });
 
-    const newTaskDef = {};
-
-    for (const key in targetObject) {
-      newTaskDef[key] = parsedEnvgateObj[key];
-    }
-
     if (this.program.get) {
-      const wantedValues = newTaskDef[this.program.get];
+      const wantedValues = parsedEnvgateObj[this.program.get];
       if (!wantedValues) {
         this.logError("You are trying to get a value which does not exist");
       } else {
         console.log(wantedValues);
         process.exit();
       }
+    }
+
+    const newTaskDef = {};
+
+    for (const key in targetObject) {
+      newTaskDef[key] = parsedEnvgateObj[key];
     }
 
     fs.writeFileSync(this.outputPath, JSON.stringify(newTaskDef, undefined, 2));
