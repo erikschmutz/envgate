@@ -1,13 +1,13 @@
 {
   "name": "envgate",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "reads in and replaces the keys in the task definition from the .envgate file",
   "main": "dist",
   "bin": {
     "envgate": "./bin/index"
   },
   "scripts": {
-    "prepublish": " npm run build",
+    "prepublish": "git add . && git commit -m 'published to npm' && git push && npm run build",
     "start": "ts-node src/index",
     "test": "echo \"Error: no test specified\" && exit 1",
     "debug": "npm run start",

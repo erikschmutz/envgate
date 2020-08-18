@@ -98,6 +98,16 @@ class Handler {
       newTaskDef[key] = parsedEnvgateObj[key];
     }
 
+    if (this.program.get) {
+      const wantedValues = newTaskDef[this.program.get];
+      if (!wantedValues) {
+        this.logError("You are trying to get a value which does not exist");
+      } else {
+        console.log(wantedValues);
+        process.exit();
+      }
+    }
+
     fs.writeFileSync(this.outputPath, JSON.stringify(newTaskDef, undefined, 2));
 
     this.log("Created new file: " + this.outputPath);
@@ -113,6 +123,7 @@ new Handler(
     .option("-t, --target [string]", "Path for the target file")
     .option("-o, --output [string]", "Path for the outputted file")
     .option("-e, --env <string...>", "extra enviroment varibles")
+    .option("-g, --get [string]", "gets a certain value from the env")
     .version("0.0.4")
     .parse(process.argv)
 );

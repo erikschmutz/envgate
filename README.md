@@ -63,3 +63,6 @@ Should be use in the following way
 If you have a specific stage or similiair it can be easy to just add the stage as a seperate varible.
 
     envgate -f config.json -e STAGE prod -t target.json
+
+**-g, --get [string]**
+Get a certain value in the env instead of building the output file
