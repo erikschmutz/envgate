@@ -82,14 +82,14 @@ class Handler {
     fieldsObjects?.forEach(v => {
       mergeObject = {
         ...{ ...mergeObject },
-        ...v
+        ...v,
       };
     });
 
     const parsedEnvgateObj = interpolate({
       ...mergeObject,
       ...this.extraEnvs,
-      ...targetObject
+      ...targetObject,
     });
 
     if (this.program.get) {
@@ -123,6 +123,7 @@ new Handler(
     .option("-t, --target [string]", "Path for the target file")
     .option("-o, --output [string]", "Path for the outputted file")
     .option("-e, --env <string...>", "extra enviroment varibles")
+    .option("-pe, --process-env", "use the env which exists for the process")
     .option("-g, --get [string]", "gets a certain value from the env")
     .version("0.0.4")
     .parse(process.argv)

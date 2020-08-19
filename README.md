@@ -66,3 +66,7 @@ If you have a specific stage or similiair it can be easy to just add the stage a
 
 **-g, --get [string]**
 Get a certain value in the env instead of building the output file
+
+
+**-pe, --process-env**
+Uses the env varibles within the project aswell
