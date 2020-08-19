@@ -1,6 +1,6 @@
 {
   "name": "envgate",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "reads in and replaces the keys in the task definition from the .envgate file",
   "main": "dist",
   "bin": {

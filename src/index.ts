@@ -77,7 +77,7 @@ class Handler {
 
     const targetObject = JSON.parse(fs.readFileSync(this.targetPath, "utf-8"));
 
-    let mergeObject = {};
+    let mergeObject = this.program.processEnv ? {} : { ...process.env };
 
     fieldsObjects?.forEach(v => {
       mergeObject = {
